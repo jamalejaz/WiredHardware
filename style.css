@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --color-primary: #B7CC32;
+    --color-secondary: #DE97B0;
+    --color-blue: #5F8EF3;
+    --color-black: #000;
+    --color-white: #fff;
+}
+
+body{
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(./img/background-img.jpg) center center no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: "Montserrat", serif;
+}
+
+.container{
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.section-head {
+    max-width: 40rem;
+    margin: 0 auto 50px auto;
+    text-align: center;
+}
+
+.section-head h2 {
+    color: var(--color-white);
+    font-size: 35px;
+    text-shadow: 3px 3px var(--color-black);
+    margin-bottom: 20px;
+}
+
+.section-head p {
+    color: var(--color-white);
+    font-size: 18px;
+}
+
+.section-head .section-head-btn {
+    display: inline-block;
+    padding: 8px 10px;
+    text-decoration: none;
+    background: var(--color-secondary);
+    color: var(--color-black);
+    text-shadow: none;
+    box-shadow: 4px 4px 0 0 var(--color-white);
+    font-weight: bold;
+    margin-left: 10px;
+    margin-top: 10px;
+    border: 2px solid var(--color-black);
+    transition: .3s;
+    transform: translateY(2px);
+}
+
+.section-head .section-head-btn:hover {
+    transform: translateY(0);
+    box-shadow: 0px 0px 0 1px var(--color-black);
+}
+
+.hero-section {
+    padding: 80px 10px 10px 10px;
+}
+
+.hero-area {
+    display: flex;
+    align-items: center;
+    background: #00000030;
+    border-radius: 20px;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+    border: 1px solid #ffffff69;
+}
+
+.hero-section .hero-area .col-flex {
+    width: 50%;
+}
+
+.hero-section .hero-area .hero-content {
+    padding: 60px 100px 60px 60px;
+}
+
+.hero-section .hero-area .hero-content h1 {
+    font-size: 35px;
+    color: var(--color-secondary);
+    margin-bottom: 30px;
+}
+
+.hero-section .hero-area .hero-content p {
+    color:var(--color-white);
+    line-height: 25px;
+}
+
+.hero-section .hero-area .hero-video {
+    position: relative;
+}
+
+.hero-section .hero-area .hero-video video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: auto;
+}
+
+.card-area {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.card-section {
+    padding: 80px 10px;
+}
+
+.card-section .card-area .card {
+    width: 33.33%;
+    border: 2px solid var(--color-white);
+    background: var(--color-white);
+    overflow: hidden;
+    transition: .3s;
+}
+
+.card-section .card-area .card img {
+    width: 100%;
+    height: 345px;
+    object-fit: cover;
+    object-position: center center;
+}
+
+.card-section .card-area .card .card-text {
+    padding: 20px;
+    text-align: center;
+}
+
+.card-section .card-area .card .card-text h5 {
+    color: var(--color-black);
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.card-section .card-area .card:hover {
+    border: 2px solid var(--color-black);
+    background: var(--color-black);
+    transform: scale(1.02);
+}
+
+.card-section .card-area .card:hover .card-text h5 {
+    color: var(--color-white);
+}
+
+.copyright {
+    background: var(--color-black);
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.copyright p {
+    font-weight: 500;
+    color: var(--color-white);
+}
+
+.copyright p span {
+    color: #B7CC32;
+}
+
+@media (max-width: 768px) {
+    .hero-area {
+        flex-direction: column;
+        align-items: start;
+    }
+    .hero-section .hero-area .col-flex:nth-child(1) {
+        width: auto;
+    }
+    .hero-section .hero-area .col-flex {
+        width: 100%;
+    }
+    .hero-section .hero-area .hero-video {
+        height: 300px;
+        overflow: hidden;
+    }
+    .hero-section .hero-area .hero-video video {
+        height: auto;
+    }
+    .hero-section .hero-area .hero-content {
+        padding: 20px;
+    }
+    .hero-section .hero-area .hero-content h1 {
+        font-size: 25px;
+    }
+    .hero-section .hero-area .hero-content p {
+        color:var(--color-white);
+        line-height: 25px;
+    }
+    .section-head h2 {
+        font-size: 23px;
+    }
+    .card-section .card-area {
+        display: inline-block;
+        width: 48%;
+    }
+    .card-section .card-area.mr-1 {
+        margin-right: 2%;
+    }
+    .card-section .card-area .card {
+        width: 100%;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 450px) {
+    .card-area {
+        display: flex !important;
+        flex-direction: column;
+        width: 100% !important;
+    }
+    .card-section .card-area .card {
+        width: 100%;
+    }
+}
